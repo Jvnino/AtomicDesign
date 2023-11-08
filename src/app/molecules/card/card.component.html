@@ -1,0 +1,5 @@
+<div class="card" [style.borderColor]="getColor(titulo)">
+    <h3 [style.color]="getColor(titulo)">{{titulo}}</h3>
+    <p class="descripcion">{{descripcion}}</p>
+    <a routerLink="/detalle-curso/{{titulo}}" class="button-link" [style.backgroundColor]="getColor(titulo)">Registrarse</a>
+  </div>

@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<!-- Mostrar tarjetas o barra de progreso según la condición -->
+<ng-container *ngIf="mostrarTarjetas; else progress">
+  <div class="card-container">
+    <app-card class="tarjeta-HTML" titulo="Taller de HTML" descripcion="..."></app-card>
+    <!-- Agrega las otras tarjetas aquí -->
+  </div>
+</ng-container>
+
+<ng-template #progress>
+  <app-progress-bar></app-progress-bar>
+</ng-template>
+
+<app-footer></app-footer>
