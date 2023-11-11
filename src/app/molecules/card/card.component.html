@@ -1,5 +1,15 @@
-<div class="card" [style.borderColor]="getColor(titulo)">
-    <h3 [style.color]="getColor(titulo)">{{titulo}}</h3>
-    <p class="descripcion">{{descripcion}}</p>
-    <a routerLink="/detalle-curso/{{titulo}}" class="button-link" [style.backgroundColor]="getColor(titulo)">Registrarse</a>
-  </div>
+<!-- card.component.html -->
+
+<div class="card" [style.borderColor]="getColor(titulo)" [style.boxShadow]="'0 0 10px ' + color">
+  <h3 [style.color]="getColor(titulo)">{{titulo}}</h3>
+  <p class="descripcion">{{descripcion}}</p>
+
+  <ng-container *ngIf="enMisCursos; else registerButton">
+    <app-progress-bar [progress]="30" [textColor]="getColor(titulo)" [fillColor]="getColor(titulo)"></app-progress-bar>
+  </ng-container>
+
+  <ng-template #registerButton>
+    <button class="button-link" (click)="registrarTaller()" [style.backgroundColor]="getColor(titulo)" style="border: none;">Registrarse</button>
+  </ng-template>
+</div>
+

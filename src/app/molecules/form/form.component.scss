@@ -1,0 +1,76 @@
+/* registro-form.component.scss */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+    .curso {
+      grid-column: span 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+  
+      label {
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: var(--text-color, #000);
+      }
+  
+      input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+    }
+  
+    #curso {
+      grid-row: 1 / span 2;
+      grid-column: 1 / span 2;
+    }
+  
+    #nombre {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+    }
+  
+    #apellido {
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 1;
+    }
+  
+    #correo {
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 1;
+    }
+  
+    #telefono {
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+    }
+  
+    button {
+      grid-row: 4 / span 1;
+      grid-column: 1 / span 2;
+      background-color: var(--button-bg-color, #007bff);
+      color: var(--button-text-color, #fff);
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button-link {
+        background-color: var(--button-color, #007bff); 
+        color: var(--button-text-color, #fff); 
+      }
+
+      .error-message{
+        color: red;
+      }
+  }
+  

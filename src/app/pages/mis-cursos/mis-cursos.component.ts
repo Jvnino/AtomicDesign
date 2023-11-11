@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./mis-cursos.component.scss']
 })
 export class MisCursosComponent {
-  mostrarTarjetas = true; // Por defecto, mostrar las tarjetas
+  mostrarTarjetas = true; 
 
-  // Lógica para cambiar a la barra de progreso cuando sea necesario
-  // Por ejemplo, cuando se hace clic en "Mis Cursos"
   mostrarBarraDeProgreso() {
     this.mostrarTarjetas = false;
+  }
+
+  imprimirEnConsola(): void {
+    console.log('Mensaje impreso en la consola desde el HTML');
   }
 }

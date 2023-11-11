@@ -1,1 +1,10 @@
-<div class="progress-bar"></div>
+<!-- progress-bar.component.html -->
+
+<div class="progress-bar-container">
+    <div class="progress-bar-background"></div>
+    <div class="progress-bar-fill" [style.width.%]="progress" [style.backgroundColor]="fillColor"></div>
+    <div class="progress-bar-text-container">
+      <div class="progress-bar-text" [style.color]="textColor">{{'Avance '+ progress}}%</div>
+    </div>
+  </div>
+  

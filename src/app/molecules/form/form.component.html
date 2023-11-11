@@ -1,0 +1,33 @@
+<form>
+  <div class="curso">
+    <label for="curso" [style.color]="color || '--text-color'">Curso:</label>
+    <input id="curso" name="curso" [(ngModel)]="nombreCurso" readonly [style.color]="color || '--text-color'">
+  </div>
+
+  <div class="curso">
+    <label for="nombre" [style.color]="color || '--text-color'">Nombre:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="nombre" required>
+    <div *ngIf="nombreError" class="error-message">*Este campo es obligatorio.</div>
+  </div>
+
+  <div class="curso">
+    <label for="apellido" [style.color]="color || '--text-color'">Apellido:</label>
+    <input id="apellido" name="apellido" [(ngModel)]="apellido" required>
+    <div *ngIf="apellidoError" class="error-message">*Este campo es obligatorio.</div>
+  </div>
+
+  <div class="curso">
+    <label for="correo" [style.color]="color || '--text-color'">Email:</label>
+    <input id="correo" name="correo" [(ngModel)]="correo" required>
+    <div *ngIf="correoError" class="error-message">*Este campo es obligatorio.</div>
+  </div>
+
+  <div class="curso">
+    <label for="telefono" [style.color]="color || '--text-color'">Teléfono:</label>
+    <input id="telefono" name="telefono" [(ngModel)]="telefono" required type="number">
+    <div *ngIf="telefonoError" class="error-message">*Este campo es obligatorio.</div>
+  </div>
+
+  <button type="submit" (click)="submitForm()" [style.backgroundColor]="color || '--button-color'">Registrarse</button>
+
+</form>
